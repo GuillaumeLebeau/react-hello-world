@@ -18,11 +18,21 @@ function getGreeting(user) {
 
 const user = {
     firstName: 'Guillaume',
-    lastName: 'Lebeau'
+    lastName: 'Lebeau',
+    avatarUrl: 'https://avatars2.githubusercontent.com/u/2910740?v=4&u=2ffd5540cdb3d888518eebc171f55177a66db921&s=400'
 };
 
+const userAvatarElement = <img src={user.avatarUrl} alt="avatar"></img>;
+
 const element = (
-    getGreeting(user)
+    <section>
+        <div>
+            {getGreeting(user)}
+        </div>
+        <div>
+            {userAvatarElement}
+        </div>
+    </section>
 );
 
 ReactDOM.render(
